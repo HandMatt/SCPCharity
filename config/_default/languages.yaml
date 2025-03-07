@@ -1,0 +1,62 @@
+en:
+  languageName: English
+  weight: 1
+  ### copyright (markdown can be used) ###
+  copyright: "Copyright &copy; {{< current_year >}} Supporting Children's Pathways. All Rights Reserved. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo by [CNCF](https://www.cncf.io)."
+  title: "Supporting Children's Pathways"
+  params:
+    description: "Site Description"
+    ### accessibility ###
+    accessibility:
+      skip_text: "Skip to content"
+      help_text: "Accessibility Statement"
+      help_url: "/example-page/"
+    ### calls to action ###
+    main_cta:
+      text: "Join"
+      link: "/example-page/"
+    footer_cta:
+      text: "Join us"
+      link: "/example-page/"
+    github_edit: "Edit this page on GitHub"
+  ### example menu showing children ###
+  menu:
+    main:
+    - identifier: "about"
+      name: "About"
+      url: "/example-page/"
+      weight: 1
+    - identifier: "child-1"
+      name: "Example Child Page"
+      url: "/example-page/"
+      weight: 1
+      post: "Nulla consequat massa quis enim. Donec pede justo."
+      parent: "about"
+    - identifier: "child-2"
+      name: "Example Child Page"
+      url: "/example-page/"
+      weight: 2
+      post: "Aenean commodo ligula get dolor. Aenean massa."
+      parent: "about"
+    - identifier: "child-3"
+      name: "Example External page"
+      url: "https://cncf.io?ref=dot-org"
+      weight: 3
+      post: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo."
+      parent: "about"
+    - identifier: "demo-page"
+      name: "Demo Page"
+      url: "/demo-page/"
+      weight: 2
+    - identifier: "faq"
+      name: "FAQs"
+      url: "/faq/"
+      weight: 3
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 4
+    - identifier: "example"
+      name: "External"
+      url: "https://cncf.io?ref=dot-org"
+      weight: 5

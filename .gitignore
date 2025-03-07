@@ -1,0 +1,37 @@
+# Hugo default output directory
+/public/
+/resources/
+
+# Hugo generated files
+.hugo_build.lock
+
+# Node modules
+node_modules/
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux system files
+*~
+.directory
+
+# Temporary files
+*.log
+*.swp
+*~
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
