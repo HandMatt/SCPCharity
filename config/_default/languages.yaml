@@ -2,61 +2,63 @@ en:
   languageName: English
   weight: 1
   ### copyright (markdown can be used) ###
-  copyright: "Copyright &copy; {{< current_year >}} Supporting Children's Pathways. All Rights Reserved. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo by [CNCF](https://www.cncf.io)."
+  copyright: "Copyright &copy; {{< current_year >}} Supporting Children's Pathways. All Rights Reserved."
+
   title: "Supporting Children's Pathways"
   params:
-    description: "Site Description"
+    description: "Empowering children and families to thrive through quality education, mentorship, and community support."
     ### accessibility ###
     accessibility:
       skip_text: "Skip to content"
       help_text: "Accessibility Statement"
-      help_url: "/example-page/"
+      help_url: "/accessibility/"
     ### calls to action ###
     main_cta:
-      text: "Join"
-      link: "/example-page/"
+      text: "Donate"
+      link: "/donate/"
     footer_cta:
-      text: "Join us"
-      link: "/example-page/"
+      text: "Donate"
+      link: "/donate/"
+    ### footer text ###
+    theme_copyright: "[Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo by [CNCF](https://www.cncf.io)."
     github_edit: "Edit this page on GitHub"
+    privacy_policy_url: "/privacy-policy/"
+    privacy_policy_text: "Privacy Policy"
+    sitemap_url: "/sitemap/"
+    sitemap_text: "Sitemap"
   ### example menu showing children ###
   menu:
     main:
     - identifier: "about"
       name: "About"
-      url: "/example-page/"
       weight: 1
-    - identifier: "child-1"
-      name: "Example Child Page"
-      url: "/example-page/"
+    - identifier: "about-us"
+      name: "About Us"
+      url: "/about-us/"
       weight: 1
-      post: "Nulla consequat massa quis enim. Donec pede justo."
+      post: "Learn about our background and founding"
       parent: "about"
-    - identifier: "child-2"
-      name: "Example Child Page"
-      url: "/example-page/"
+    - identifier: "our-team"
+      name: "Our Team"
+      url: "/our-team/"
       weight: 2
-      post: "Aenean commodo ligula get dolor. Aenean massa."
+      post: "Learn about our key team members and their roles"
       parent: "about"
-    - identifier: "child-3"
-      name: "Example External page"
-      url: "https://cncf.io?ref=dot-org"
+    - identifier: "impact"
+      name: "Impact"
+      url: "/impact/"
       weight: 3
-      post: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo."
+      post: "Learn about the impact of our work"
       parent: "about"
-    - identifier: "demo-page"
-      name: "Demo Page"
-      url: "/demo-page/"
+    - identifier: "initiatives"
+      name: "Initiatives"
+      url: "/initiatives/"
       weight: 2
-    - identifier: "faq"
-      name: "FAQs"
-      url: "/faq/"
+    - identifier: "events"
+      name: "Events"
+      url: "/events/"
       weight: 3
-    - identifier: "blog"
-      name: "Blog"
-      url: "/blog/"
+    - identifier: "contact"
+      name: "Contact"
+      url: "/contact/"
       weight: 4
-    - identifier: "example"
-      name: "External"
-      url: "https://cncf.io?ref=dot-org"
-      weight: 5

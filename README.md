@@ -15,7 +15,7 @@ Our website serves as a central hub for information about our charity's mission,
 
 The website is built using:
 - [Hugo](https://gohugo.io/) - A fast and modern static site generator
-- The [Dot-Org Hugo Theme](https://themes.gohugo.io/themes/dot-org-hugo-theme/) - A modern, accessible theme ideal for non-profit organizations
+- The [Dot-Org Hugo Theme](https://themes.gohugo.io/themes/dot-org-hugo-theme/) - A modern, accessible theme ideal for non-profit organisations
 
 ## Prerequisites
 
@@ -57,13 +57,13 @@ npm run build
 
 ```
 SCPCharity/
-├── config/             # Website configuration files
-├── content/            # Website content (pages, posts, etc.)
-├── static/             # Static assets (images, CSS, JS)
-├── themes/             # Theme files
+├── config/                  # Website configuration files
+├── content/                 # Website content (pages, posts, etc.)
+├── static/                  # Static assets (images, CSS, JS)
+├── themes/                  # Theme files
 │   └── dot-org-hugo-theme/  # The main theme
-├── package.json       # Node.js dependencies
-└── postcss.config.js  # PostCSS configuration
+├── package.json             # Node.js dependencies
+└── postcss.config.js        # PostCSS configuration
 ```
 
 The main directories you'll work with are:

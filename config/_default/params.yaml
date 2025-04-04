@@ -1,10 +1,10 @@
 ######################## custom scripts & styles ####################
 
 # Add custom assets relative to /static or via https
-logo_on_white: "/img/logo-b.svg"
-logo_on_black: "/img/logo-w.svg"
+logo_on_white: "/img/supporting-childrens-pathways-logo.png"
+logo_on_black: "/img/supportingchildrenspathways-logo-transparent.png"
 custom_js: []
-custom_css: []
+custom_css: ["/css/custom.css"]
 
 ######################## custom config ####################
 
@@ -12,18 +12,18 @@ custom_css: []
 images: ["/img/social-share.png"]
 
 github:
-  repo_url: "https://github.com/username/repo/blob/master"
-  show_edit_link: true
+  repo_url: "https://github.com/HandMatt/SCPCharity/blob/main"
+  show_edit_link: false
 
 social_links:
   devstats: ""
   discord: ""
   facebook: ""
   flickr: ""
-  github: "https://github.com/cncf/dot-org-hugo-theme"
+  github: ""
   instagram: ""
   landscape: ""
-  linkedin: "https://www.linkedin.com/company/cloud-native-computing-foundation"
+  linkedin: ""
   mastodon: ""
   pinterest: ""
   rss: ""
@@ -34,7 +34,10 @@ social_links:
   x: ""
   youtube: ""
 
+email: "info@supportingchildrenspathways.org"
+charity_number: "1211641"
+
 # Makes the header sticky on tall screens
 sticky_header: true
 # Enable search in header UI
-show_search: true
+show_search: false

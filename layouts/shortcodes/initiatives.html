@@ -1,0 +1,24 @@
+{{ $columns := .Get "count" | default "3" }}
+{{ $initiatives := where .Site.RegularPages "Section" "initiatives" }}
+
+{{ if eq (len $initiatives) 0 }}
+<div class="message">
+    <h3>Coming Soon!</h3>
+    <p>We're currently working on some exciting initiatives. Please check back soon to learn more about our upcoming
+        projects.</p>
+</div>
+{{ else }}
+<div class="cards columns-{{ $columns}}">
+    {{ range $initiatives }}
+    {{ if ne .Name "_index.md" }}
+    <div class="card">
+        <h2>{{ .Title }}</h2>
+        <p><em>{{ .Description }}</em></p>
+        <p class="content-preview">{{ .Summary | truncate 150 }}</p>
+        <div class="spacer"></div>
+        <a href="{{ .RelPermalink }}" class="button">Learn More</a>
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}

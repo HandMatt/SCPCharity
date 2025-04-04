@@ -1,0 +1,22 @@
+{{ $columns := .Get "count" | default "3" }}
+{{ $events := where (where .Site.RegularPages "Section" "events") "Params.upcoming" true }}
+
+{{ if eq (len $events) 0 }}
+  <div class="message">
+    <h3>Coming Soon!</h3>
+    <p>We're currently planning exciting new events. Check back soon or subscribe to our newsletter to stay updated!</p>
+  </div>
+{{ else }}
+  <div class="cards columns-{{ $columns}}">
+    {{ range $events }}
+      <div class="card">
+        <h2>{{ .Title }}</h2>
+        <p><em>{{ .Params.event_date }}</em></p>
+        <p><em>{{ .Description }}</em></p>
+        <p class="content-preview">{{ .Summary | truncate 150 }}</p>
+        <div class="spacer"></div>
+        <a href="{{ .RelPermalink }}" class="button">Learn More</a>
+      </div>
+    {{ end }}
+  </div>
+{{ end }} 

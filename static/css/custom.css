@@ -1,0 +1,61 @@
+/* Custom colours */
+:root {
+  --primary-50: #1C9FFF;
+  --primary-100: #0797FF;
+  --primary-200: #0080DE;
+  --primary-300: #0069B5;
+  --primary-400: #00518C;
+  --primary-500: #003154;
+  --primary-600: #00101C;
+  --primary-700: #000000;
+  --primary-800: #000000;
+  --primary-900: #000000;
+  --primary-950: #000000;
+
+  --secondary-50: #E4F5F7;
+  --secondary-100: #D4EFF3;
+  --secondary-200: #B5E4EA;
+  --secondary-300: #95D8E1;
+  --secondary-base: #75CCD8;
+  --secondary-500: #49BCCC;
+  --secondary-600: #319DAC;
+  --secondary-700: #247580;
+  --secondary-800: #184D55;
+  --secondary-900: #0C2529;
+  --secondary-950: #051113;
+
+  --tertiary-50: #F9C9CB;
+  --tertiary-100: #F7B7B9;
+  --tertiary-200: #F49296;
+  --tertiary-300: #F06D72;
+  --tertiary-400: #EC484F;
+  --tertiary-base: #E8232B;
+  --tertiary-600: #BF141B;
+  --tertiary-700: #8C0F14;
+  --tertiary-800: #59090D;
+  --tertiary-900: #270405;
+  --tertiary-950: #0D0102;
+}
+
+/* Footer */
+@media (max-width: 999px) {
+  .footer .copyright__accessibility-git-wrapper a:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .footer .copyright__accessibility-git-wrapper {
+    margin-bottom: 20px;
+  }
+}
+
+/* Initiatives */
+.card p em {
+  color: #666;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card .content-preview {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
