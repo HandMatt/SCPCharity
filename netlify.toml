@@ -1,0 +1,81 @@
+# Global build settings
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+# Production context: All deploys from the main branch set in your site's settings
+# will inherit these settings.
+[context.production]
+  command = "hugo --gc --minify --baseURL https://supportingchildrenspathways.org/"
+  
+# Deploy Preview context: These settings will be used when Netlify
+# creates a preview for pull requests, branches or in manual deploys
+[context.deploy-preview]
+  command = "hugo --gc --minify --baseURL $DEPLOY_URL"
+
+# Branch Deploy context: All deploys that are not from a pull request 
+# or from the production branch will inherit these settings.
+[context.branch-deploy]
+  command = "hugo --gc --minify --baseURL $DEPLOY_URL"
+
+# Redirects
+[[redirects]]
+  from = "https://supporting-childrens-pathways.netlify.app/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://supportingchildrenspathways.org/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.supportingchildrenspathways.org/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.supportingchildrenspathways.org/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
+# Headers for security and caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'"
+
+# Cache control for static assets
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
