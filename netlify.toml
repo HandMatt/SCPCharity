@@ -43,6 +43,43 @@
   status = 301
   force = true
 
+# Additional domain redirects
+[[redirects]]
+  from = "https://supportingchildrenspathways.com/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://supportingchildrenspathways.com/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://supportingchildrenspathways.co.uk/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://supportingchildrenspathways.co.uk/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://supportingchildrenspathways.info/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://supportingchildrenspathways.info/*"
+  to = "https://supportingchildrenspathways.org/:splat"
+  status = 301
+  force = true
+
 # Headers for security and caching
 [[headers]]
   for = "/*"
