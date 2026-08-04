@@ -99,6 +99,10 @@ npx -y pagefind --site public
 
 Note: You'll need to regenerate the search index whenever you update your content.
 
+## Agent / AI context
+
+Shared project context for Cursor (and other agents) lives under [`.cursor/`](.cursor/) — start at [`AGENTS.md`](AGENTS.md). Update [`.cursor/context/TIMELINE.md`](.cursor/context/TIMELINE.md) when material ownership, hosting, or architecture facts change.
+
 ## Contributing
 
 We welcome contributions! To help improve our website:
