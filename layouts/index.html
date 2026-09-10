@@ -1,3 +1,93 @@
 {{ define "main" }}
-  {{ .Content }}
+{{/* Homepage composed in bands for contrast — copy lives here so sections stay structured */}}
+
+<section class="scp-band scp-band--light scp-reveal" data-reveal aria-labelledby="home-mission-heading">
+  <div class="scp-band__inner">
+    <p class="scp-band__eyebrow">Our mission</p>
+    <h2 id="home-mission-heading" class="scp-band__title">Every child and family deserves the chance to thrive</h2>
+    <p class="scp-band__lead">
+      Supporting Children's Pathways helps children and families facing educational and life challenges
+      with access to <strong>quality education</strong>, <strong>alternative learning pathways</strong>,
+      and a <strong>nurturing community</strong> across Bristol, Bath and surrounding areas —
+      <strong>no formal diagnosis required</strong>.
+    </p>
+    <p class="scp-band__body">
+      Through mentorship and educational programmes, we aim to break cycles of disadvantage and empower
+      the next generation with the skills and confidence to build a brighter future.
+    </p>
+    <div class="scp-band__actions">
+      <a class="scp-btn scp-btn--primary" href="{{ "/about-us/" | relLangURL }}">About us</a>
+      <a class="scp-btn scp-btn--ghost-dark" href="{{ "/our-team/" | relLangURL }}">Meet the team</a>
+    </div>
+  </div>
+</section>
+
+<section class="scp-band scp-band--teal scp-reveal" data-reveal aria-labelledby="home-approach-heading">
+  <div class="scp-band__inner scp-band__inner--wide">
+    <p class="scp-band__eyebrow scp-band__eyebrow--on-dark">Our approach</p>
+    <h2 id="home-approach-heading" class="scp-band__title scp-band__title--on-dark">
+      Alternative pathways when mainstream school isn’t the right fit
+    </h2>
+    <p class="scp-band__lead scp-band__lead--on-dark">
+      Many children with Special Educational Needs thrive outside the traditional classroom.
+      We fund and champion learning that meets them where they are.
+    </p>
+
+    <div class="scp-pillars">
+      <article class="scp-pillar scp-pillar--green scp-reveal" data-reveal>
+        <h3 class="scp-pillar__title">Mentoring &amp; tuition</h3>
+        <p class="scp-pillar__text">One-to-one mentoring and tuition that builds confidence, skills and trust.</p>
+      </article>
+      <article class="scp-pillar scp-pillar--teal scp-reveal" data-reveal>
+        <h3 class="scp-pillar__title">Life skills</h3>
+        <p class="scp-pillar__text">Coaching that prepares young people for everyday independence and community life.</p>
+      </article>
+      <article class="scp-pillar scp-pillar--purple scp-reveal" data-reveal>
+        <h3 class="scp-pillar__title">Vocational experience</h3>
+        <p class="scp-pillar__text">Hands-on pathways including construction, catering and other practical trades.</p>
+      </article>
+      <article class="scp-pillar scp-pillar--deep scp-reveal" data-reveal>
+        <h3 class="scp-pillar__title">Movement &amp; development</h3>
+        <p class="scp-pillar__text">Primitive Reflex Therapy and related support to strengthen sensory-motor foundations.</p>
+      </article>
+    </div>
+
+    <p class="scp-band__body scp-band__body--on-dark scp-band__body--follow">
+      We also help families navigate <strong>Education, Health and Care Plans (EHCPs)</strong>,
+      filling gaps where schools and local authorities are underfunded.
+    </p>
+  </div>
+</section>
+
+<section class="scp-band scp-band--contrast scp-reveal" data-reveal aria-labelledby="home-grants-heading">
+  <div class="scp-band__inner scp-band__inner--wide">
+    <div class="scp-split">
+      <div class="scp-split__main">
+        <p class="scp-band__eyebrow">Grant provision</p>
+        <h2 id="home-grants-heading" class="scp-band__title">Funding support for ages 6 to 25</h2>
+        <p class="scp-band__lead">
+          We provide <strong>grants</strong> to service providers who support children and young people —
+          whether or not they have a SEN diagnosis or an EHCP.
+        </p>
+        <p class="scp-band__body">
+          Each application is reviewed by our
+          <a href="{{ "/our-team/" | relLangURL }}#our-trustees">Trustees</a>
+          before funding decisions are made.
+        </p>
+      </div>
+      <div class="scp-split__aside">
+        <h3 class="scp-split__aside-title">Who can apply</h3>
+        <ul class="scp-chip-list">
+          <li>Families</li>
+          <li>Service providers</li>
+          <li>Schools</li>
+          <li>Local authorities</li>
+          <li>Social workers</li>
+          <li>Youth offending teams</li>
+          <li>CAMHS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 {{ end }}

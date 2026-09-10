@@ -9,7 +9,7 @@ no. `1211641`). Static marketing / information site — no app backend.
 |-------|--------|
 | SSG | Hugo via `hugo-extended` (`^0.144.0` in `package.json`) |
 | Theme | [dot-org-hugo-theme](https://github.com/cncf/dot-org-hugo-theme) (CNCF; git submodule) |
-| CSS | Theme styles + PostCSS/Autoprefixer; site CSS in `static/css/custom.css` |
+| CSS | Theme styles + PostCSS/Autoprefixer; site CSS in `static/css/custom.css` (Sporting Chance–aligned teal + Montserrat/Karla) |
 | Package manager | npm |
 | Search | Pagefind (documented; `show_search: false` in params) |
 | Hosting | Production URL `https://www.supportingchildrenspathways.org/` (Netlify CLI is a dep; no root `netlify.toml` yet) |

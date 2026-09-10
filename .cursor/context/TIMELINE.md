@@ -3,6 +3,10 @@
 Living log of material project changes. **Newest first.**
 Update in the same PR as the change. Keep entries to one short bullet.
 
+## 2026-09
+
+- **Style alignment with Sporting Chance** — On `feature/align-styling-with-sc`: teal tokens + Montserrat/Karla; header/footer/hero; homepage full-bleed bands; site-wide Get Involved pre-footer (footer Donate button removed).
+
 ## 2026-08
 
 - **Cursor context** — Added `.cursor/` + `AGENTS.md` as the starting point for AI-assisted maintenance (this file, `PROJECT.md`, project rules).

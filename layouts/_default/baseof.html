@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+    {{- partial "head.html" . -}}
+    <body class="{{ urlize .Type }} page-{{ .Kind }}{{ if .IsHome }} page-home{{ end }}">
+        {{- partial "accessibility.html" . -}}
+        {{- partial "header.html" . -}}
+
+        {{ if .IsHome }}
+        {{- partial "home-hero.html" . -}}
+        <div id="content" class="home-page" {{ if .IsPage }}data-pagefind-body{{ end }}>
+        {{ else }}
+        <section id="content" class="container wrap" {{ if .IsPage }}data-pagefind-body{{ end }}>
+            {{ if ne .Params.showHeader false }}
+                <header>
+                    {{ if and (eq .Kind "page") (ne .Section "") }}
+                    {{- partial "breadcrumb.html" . -}}
+                    {{ end }}
+                    <h1 class="title">{{ .Title }}</h1>
+                </header>
+            {{ end }}
+            {{ if eq .Kind "section" }}
+            <div class="content">
+            {{ else }}
+            <article class="content">
+            {{ end }}
+        {{ end }}
+
+            {{- block "main" . }}{{ .Content }}{{- end }}
+
+        {{ if .IsHome }}
+        </div>
+        {{ else }}
+            {{ if eq .Kind "section" }}
+            </div>
+            {{ else }}
+            </article>
+            {{ end }}
+        </section>
+        {{ end }}
+
+        {{- partial "get-involved.html" . -}}
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

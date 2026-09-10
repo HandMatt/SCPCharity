@@ -2,14 +2,14 @@
 {{ $events := where (where .Site.RegularPages "Section" "events") "Params.upcoming" false }}
 
 {{ if eq (len $events) 0 }}
-  <div class="message">
+  <div class="message scp-reveal" data-reveal>
     <h3>Stay Tuned!</h3>
     <p>Our events archive will be updated soon with our past achievements.</p>
   </div>
 {{ else }}
   <div class="cards columns-{{ $columns}}">
     {{ range $events }}
-      <div class="card">
+      <div class="card scp-reveal" data-reveal>
         <h2>{{ .Title }}</h2>
         <p><em>{{ .Params.event_date }}</em></p>
         <p><em>{{ .Description }}</em></p>

@@ -3,7 +3,7 @@
 # Add custom assets relative to /static or via https
 logo_on_white: "/img/supporting-childrens-pathways-logo.png"
 logo_on_black: "/img/supportingchildrenspathways-logo-transparent.png"
-custom_js: []
+custom_js: ["/js/scroll-reveal.js"]
 custom_css: ["/css/custom.css"]
 
 ######################## custom config ####################
