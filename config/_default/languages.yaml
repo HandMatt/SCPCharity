@@ -16,9 +16,10 @@ en:
     main_cta:
       text: "Donate"
       link: "/donate/"
+    ### footer Donate CTA removed — site-wide Get Involved band handles this ###
     footer_cta:
-      text: "Donate"
-      link: "/donate/"
+      text: ""
+      link: ""
     ### footer text ###
     theme_copyright: "[Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo by [CNCF](https://www.cncf.io)."
     github_edit: "Edit this page on GitHub"
