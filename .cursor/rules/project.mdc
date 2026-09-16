@@ -1,0 +1,24 @@
+---
+description: Supporting Children's Pathways site conventions for agents
+alwaysApply: true
+---
+
+# Supporting Children's Pathways
+
+Hugo + CNCF `dot-org-hugo-theme` static charity site. Read
+`.cursor/context/PROJECT.md` for stack and layout. Keep
+`.cursor/context/TIMELINE.md` current when ownership, hosting, or architecture
+changes.
+
+## Do
+
+- Edit page copy in `content/en/`; templates in `layouts/`; assets in `static/`.
+- Prefer site overrides and `static/css/custom.css` over editing the theme submodule.
+- Prefer PRs into `develop`; leave `main` for production releases.
+- Prefer updating `PROJECT.md` / `TIMELINE.md` over creating new context docs.
+
+## Don't
+
+- Don't add app/backend scaffolding — this is a static marketing site.
+- Don't invent a large docs tree; two context files plus rules are enough.
+- Don't commit unless the user explicitly asks.

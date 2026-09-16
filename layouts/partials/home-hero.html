@@ -1,0 +1,43 @@
+{{/* Homepage hero — visual language aligned with Sporting Chance sister site */}}
+{{ $heroBg := .Params.hero_bg | default "/img/hero.jpg" }}
+{{ $headline := .Params.hero_text | default "Helping young people achieve their potential" }}
+{{ $sub := .Params.hero_sub | default .Params.description | default .Site.Params.description }}
+{{ $ctaText := .Params.hero_cta_text | default "Donate" }}
+{{ $ctaLink := .Params.hero_cta_link | default "/donate/" }}
+
+<section class="scp-hero" aria-label="Introduction">
+  <div class="scp-hero__media" aria-hidden="true">
+    <img
+      class="scp-hero__image"
+      src="{{ $heroBg | relURL }}"
+      alt=""
+      width="1600"
+      height="900"
+      fetchpriority="high"
+      decoding="async" />
+    <div class="scp-hero__tint"></div>
+  </div>
+
+  <div class="scp-hero__washes" aria-hidden="true">
+    <span class="scp-hero__wash scp-hero__wash--a"></span>
+    <span class="scp-hero__wash scp-hero__wash--b"></span>
+  </div>
+
+  <div class="scp-hero__content">
+    <p class="scp-hero__brand scp-hero__enter" style="--scp-enter-delay: 0ms">{{ .Site.Title }}</p>
+    <h1 class="scp-hero__title scp-hero__enter" style="--scp-enter-delay: 80ms">{{ $headline | safeHTML }}</h1>
+    {{ with $sub }}
+    <p class="scp-hero__sub scp-hero__enter" style="--scp-enter-delay: 160ms">{{ . }}</p>
+    {{ end }}
+    <div class="scp-hero__cta-wrap scp-hero__enter" style="--scp-enter-delay: 240ms">
+      <a class="scp-hero__cta" href="{{ $ctaLink | relLangURL }}">{{ $ctaText }}</a>
+    </div>
+  </div>
+
+  <div class="scp-hero__edge" aria-hidden="true">
+    <svg class="scp-hero__edge-svg" viewBox="0 0 100 12" preserveAspectRatio="none" focusable="false">
+      <polygon class="scp-hero__edge-a" points="0,12 0,5 44,12" />
+      <polygon class="scp-hero__edge-b" points="56,12 100,1 100,12" />
+    </svg>
+  </div>
+</section>
