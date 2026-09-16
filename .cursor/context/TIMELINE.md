@@ -5,6 +5,7 @@ Update in the same PR as the change. Keep entries to one short bullet.
 
 ## 2026-09
 
+- **Docker** — Local Node/`hugo-extended` via Compose `site` service (`Dockerfile` + `docker-compose.yml`); `npm run dev` → `docker compose up`. Netlify build unchanged.
 - **Style alignment with Sporting Chance** — On `feature/align-styling-with-sc`: teal tokens + Montserrat/Karla; header/footer/hero; homepage full-bleed bands; site-wide Get Involved pre-footer (footer Donate button removed).
 
 ## 2026-08

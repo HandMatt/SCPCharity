@@ -1,0 +1,13 @@
+services:
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1313:1313"
+    working_dir: /app
+    user: "${UID:-1000}:${GID:-1000}"
+    volumes:
+      - ./:/app
+    # hugo-extended + PostCSS come from node_modules; install is a separate step
+    command: npm run start -- --bind 0.0.0.0

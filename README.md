@@ -19,39 +19,56 @@ The website is built using:
 
 ## Prerequisites
 
-To work on the website locally, you'll need:
-- [Hugo](https://gohugo.io/installation/) installed on your system
-- [Node.js](https://nodejs.org/) installed on your system
-- Git
+Recommended (Docker-only local workflow, same idea as Sporting Chance):
+- [Docker](https://docs.docker.com/get-docker/) with Compose
+- Git (with submodules)
+
+Optional (native tooling instead of Docker):
+- [Hugo](https://gohugo.io/installation/) Extended, or use the `hugo-extended` npm package
+- [Node.js](https://nodejs.org/)
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository (include the theme submodule):
 ```bash
-git clone [your-repository-url]
+git clone --recurse-submodules [your-repository-url]
 cd SCPCharity
 ```
 
-2. Install project dependencies:
+If you already cloned without submodules: `git submodule update --init --recursive`.
+
+2. First time (or after dependency changes), with Docker:
 ```bash
-npm install
+docker compose build
+docker compose run --rm site npm install
 ```
+
+Or install on the host: `npm install`.
 
 ## Local Development
 
-To run the site locally:
+Docker (preferred):
+
+```bash
+docker compose up
+# or: npm run dev
+```
+
+Open http://localhost:1313.
+
+Native (Hugo + Node on the host):
 
 ```bash
 npm run start
 ```
 
-This will start a local development server. You can view your site at `http://localhost:1313`.
-
 To build the site:
 
 ```bash
 npm run build
+# or: docker compose run --rm site npm run build
 ```
+
 
 ## Project Structure
 
@@ -62,9 +79,12 @@ SCPCharity/
 ├── static/                  # Static assets (images, CSS, JS)
 ├── themes/                  # Theme files
 │   └── dot-org-hugo-theme/  # The main theme
+├── docker-compose.yml       # Local Hugo + npm via Docker
+├── Dockerfile               # Node 20 image for the Compose `site` service
 ├── package.json             # Node.js dependencies
 └── postcss.config.js        # PostCSS configuration
 ```
+
 
 The main directories you'll work with are:
 - `content/` - Where you'll add and edit website content
