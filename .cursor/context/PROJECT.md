@@ -11,8 +11,9 @@ no. `1211641`). Static marketing / information site — no app backend.
 | Theme | [dot-org-hugo-theme](https://github.com/cncf/dot-org-hugo-theme) (CNCF; git submodule) |
 | CSS | Theme styles + PostCSS/Autoprefixer; site CSS in `static/css/custom.css` (Sporting Chance–aligned teal + Montserrat/Karla) |
 | Package manager | npm |
+| Local runtime | Docker Compose (`site` service: Node 20 + `hugo-extended` / PostCSS); optional native `npm run start` |
 | Search | Pagefind (documented; `show_search: false` in params) |
-| Hosting | Production URL `https://www.supportingchildrenspathways.org/` (Netlify CLI is a dep; no root `netlify.toml` yet) |
+| Hosting | Production URL `https://www.supportingchildrenspathways.org/` (Netlify; root `netlify.toml`) |
 
 ## Repo layout
 
@@ -31,16 +32,22 @@ no. `1211641`). Static marketing / information site — no app backend.
 ## Commands
 
 ```bash
-npm install     # install
-npm run start   # hugo serve → http://localhost:1313
-npm run build   # production Hugo build
+# Docker (preferred local workflow — same pattern as Sporting Chance)
+docker compose build
+docker compose run --rm site npm install
+docker compose up          # or: npm run dev → http://localhost:1313
+
+# Native (optional)
+npm install
+npm run start              # hugo serve → http://localhost:1313
+npm run build              # production Hugo build
 ```
 
 Optional search index (after build): `npx -y pagefind --site public`.
 
-Prefer `npm run start` / `npm run build` for day-to-day site work. Scripts
-named `dev:*` target theme exampleSite paths (`themesDir=../..`) and are not
-the usual charity-site workflow.
+Prefer `docker compose up` / `npm run dev` for day-to-day site work. Netlify
+build is unchanged (`hugo` on their image). Scripts named `dev:*` target theme
+exampleSite paths (`themesDir=../..`) and are not the usual charity-site workflow.
 
 ## Git workflow
 
