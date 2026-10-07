@@ -18,7 +18,7 @@ Check out our latest initiatives below to learn how we're making a difference in
 We encourage everyone to get involved! Here are some options:
 
 - **Volunteer:** Join our team and make a direct impact in the lives of children and young people.
-- **Donate:** Your contributions matter! For example, a donation of £XX can provide a one-hour mentoring session, helping a child gain valuable skills.
+- **Donate:** Your contributions matter. Donations help fund mentoring and educational support that builds valuable skills for children and young people.
 
 ---
 
